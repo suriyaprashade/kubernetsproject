@@ -50,10 +50,9 @@ spec:
               mountPath: /data/db
 
           securityContext:
-            allowPrivilegeEscalation: false
-            capabilities:
-              drop:
-                - ALL
+            runAsUser: 0
+            runAsGroup: 0
+            allowPrivilegeEscalation: true
 
           resources:
             requests:
