@@ -6,13 +6,13 @@ metadata:
   namespace: production
 
 spec:
-  type: {{ .Values.frontend.service.type }}
+  type: ClusterIP
 
   selector:
     app: react-app
 
   ports:
-  - name: {{ .Values.frontend.ports.name }}
-    port: {{ .Values.frontend.ports.port }}
-    targetPort: {{ .Values.frontend.ports.targetPort }}
-    protocol: {{ .Values.frontend.ports.protocol }}
+  - name: frontend
+    port: 80
+    targetPort: 8080
+    protocol: TCP
