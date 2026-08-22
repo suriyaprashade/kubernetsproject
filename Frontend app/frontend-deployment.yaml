@@ -37,7 +37,7 @@ spec:
         imagePullPolicy: IfNotPresent
 
         ports:
-          name: frontend
+        - name: frontend
           containerPort: 8080
 
         securityContext:
