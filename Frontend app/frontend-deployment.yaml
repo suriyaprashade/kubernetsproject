@@ -10,7 +10,7 @@ metadata:
     developer: suriyaprashad
 
 spec:
-  replicas: 3
+  replicas: 1
 
   strategy:
     type: RollingUpdate
