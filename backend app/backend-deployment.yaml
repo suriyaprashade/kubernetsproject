@@ -41,7 +41,7 @@ spec:
           containerPort: 4000
           protocol: TCP
         env:                # Nested env blocks inside the container array
-        - name: MONGO_URL
+        - name: MONGO_URI
           valueFrom:
             secretKeyRef:
               name: backend-secret # Fixed to match your actual secret name
