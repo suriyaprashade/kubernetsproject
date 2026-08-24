@@ -41,11 +41,12 @@ spec:
           containerPort: 4000
           protocol: TCP
         env:                # Nested env blocks inside the container array
-        - name: MONGO_URI
-          valueFrom:
-            secretKeyRef:
-              name: backend-secret # Fixed to match your actual secret name
-              key: mongodb 
+        - name: MONGO_URL
+          value: "mongodb://database-service:27017/fooddelivery"
+          #valueFrom:
+            #secretKeyRef:
+              #name: backend-secret # Fixed to match your actual secret name
+              #key: mongodb 
         resources:          # Nested resource blocks inside the container array
           requests:
             cpu: "100m"
